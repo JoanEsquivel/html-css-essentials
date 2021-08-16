@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    font-family: monospace;
+    color:green;
+}
+
+/*The order matters.*/
+.pink-text{
+    color: pink;
+}
+
+.blue-text{
+    color: blue;
+}
+
+/*ID has top priority*/
+#orange-text{
+    color: orange;
+}
