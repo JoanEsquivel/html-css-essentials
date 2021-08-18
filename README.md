@@ -20,5 +20,7 @@ This section should list the global scenarios reviewed
 * [Cascading Inheritance & Override](#)
 * [Colors](#)
 * [Variables](#)
+* [Media Queries](#)
+* [CSS Grid](#)
 
 
