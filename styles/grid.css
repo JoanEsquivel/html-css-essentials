@@ -1,0 +1,115 @@
+
+.container{
+    font-size: 40px;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    grid-template-rows: repeat(3,1fr);
+
+    grid-template-areas: 
+      "header header header"
+      "advert content  content"
+      "footer footer footer"
+    ;
+
+
+    gap: 10px 20px;
+    /* justify-items: center; */
+    /* align-items: end; */
+}
+
+.d1{
+    background-color: lightskyblue;
+}
+.d2{
+    background-color: lightsalmon;
+}
+.d3{
+    background-color: paleturquoise;
+    /* justify-self:  center; */
+}
+.d4{background-color: lightpink;}
+.d5{
+    background-color: palegreen;
+    grid-area: footer;
+    /* grid-column: 2/4;
+    grid-row: 2/4; */
+}
+
+/*Second Approach*/
+
+.grid-from-items{
+    font-size: 40px;
+    background-color: gainsboro;
+    width: 100%;
+    display: grid ;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    grid-template-rows: repeat(3,1fr);
+    
+}
+.c1{
+    background-color: lightskyblue;
+}
+.c2{
+    background-color: lightsalmon;
+}
+.c3{
+    background-color: paleturquoise;
+}
+.c4{background-color: lightpink;}
+.c5{
+    background-color: palegreen;
+    /* grid-area: 3/1/4/4; */
+}
+
+/*HTML Grid Reponsive*/
+
+.html-grid{
+    font-size: 24px;
+    min-height: 500px;
+    width: 100%;
+    padding: 10px;
+    background-color: lightslategray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 100px 100px 100px;
+    gap: 10px;
+    grid-template-areas: 
+      "header"
+      "advert"
+      "content"
+      "footer";
+}
+
+header{
+    background-color: lime;
+    grid-area: header;
+}
+
+aside{
+    background-color:mediumorchid;
+    grid-area: advert;
+}
+
+article{
+    background-color:olive;
+    grid-area: content;
+}
+
+footer{
+    background-color: palegoldenrod;
+    grid-area: footer;
+}
+
+@media (min-width: 400px) {
+    .html-grid{
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "advert header"
+        "advert content"
+        "advert footer";
+    }
+}
